@@ -62,11 +62,12 @@ Window {
     function getImageUrl(qImage){
         if (qImage){
             metadataImageProvider.updateImage(qImage)
-            return "image://metadataCoverArt/cover"
+            return "image://metadataCoverArt/cover" + new Date().getMilliseconds()
         }
         return null
     }
     Image{
+        id:image
         x:100
         y:100
         width: 200
